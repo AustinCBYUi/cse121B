@@ -6,7 +6,6 @@ newParagraph.innerText = "Added with JavaScript!";
 //adds paragraph to the document!
 document.body.appendChild(newParagraph);
 
-
 //Create new image
 const newImage = document.createElement("img");
 
@@ -17,8 +16,15 @@ newImage.setAttribute("alt", "This is a picture of something but I'm not too sur
 document.body.appendChild(newImage);
 
 
-//new section
-const newSection = document.createElement("section");
+// //new section
+// const newSection = document.createElement("section");
 
-newSection.innerHTML = "<h2>CSE 121B</h2><p>Welcome to JavaScript!</p>";
-document.body.appendChild(newSection);
+// newSection.innerHTML = "<h2>CSE 121B</h2><p>Welcome to JavaScript!</p>";
+// document.body.appendChild(newSection);
+
+const section = document.createElement("section");
+const h3 = document.createElement("h3");
+h3.textContent = "Relief Society";
+
+section.appendChild(h3);
+document.body.appendChild(section);
