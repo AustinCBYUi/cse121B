@@ -30,16 +30,23 @@ imageElement.setAttribute("alt", `Profile Picture of ${fullName}`);
 
 
 /* Step 5 - Array */
-
+//Thank you Martin!
 let favoriteFood = [
     "Pizza",
     "Baked Chicken Tacos",
-    "Jimmy Johns!"
+    "Jimmy Johns"
 ];
 
 
-let singleFavoriteFood = favoriteFood[0];
+let singleFavoriteFood = "Homemade Waffles";
+favoriteFood.push(singleFavoriteFood);
 
+foodElement.innerHTML += `<br>${favoriteFood}`;
+//remove first item
+favoriteFood.shift();
+foodElement.innerHTML += `<br>${favoriteFood}`;
+//remove last item
+favoriteFood.pop();
 foodElement.innerHTML += `<br>${favoriteFood}`;
 
 
