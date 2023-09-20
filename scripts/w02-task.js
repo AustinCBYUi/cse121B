@@ -14,13 +14,14 @@ let profilePicture = "images/MyWedding.jpg";
 const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
 let yearElement = document.querySelector("#year");
-const imageElement = document.getElementById("image");
+const idk = document.querySelector("#home");
+const imageElement = document.querySelector("#home picture img")
 
 
 
 /* Step 4 - Adding Content */
 
-nameElement.innerHTML(`<strong>${fullName}</strong>`);
+nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = "2023";
 imageElement.setAttribute("src", profilePicture);
 imageElement.setAttribute("alt", `Profile Picture of ${fullName}`);
@@ -30,6 +31,16 @@ imageElement.setAttribute("alt", `Profile Picture of ${fullName}`);
 
 /* Step 5 - Array */
 
+let favoriteFood = [
+    "Pizza",
+    "Baked Chicken Tacos",
+    "Jimmy Johns!"
+];
+
+
+let singleFavoriteFood = favoriteFood[0];
+
+foodElement.innerHTML += `<br>${favoriteFood}`;
 
 
 
