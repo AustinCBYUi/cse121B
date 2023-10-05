@@ -21,16 +21,16 @@ buttonElement.addEventListener("click", addNumbers);
 
 const buttonElementSubtract = document.getElementById("subtractNumbers");
 
-function subtract(number1, number2) {
+const sub = function subtract(number1, number2) {
     return number1 - number2;
 }
 
 
-function subNumbers() {
+const subNumbers = function subtractNumbers() {
     let num1 = Number(document.querySelector("#subtract1").value);
     let num2 = Number(document.querySelector("#subtract2").value);
 
-    document.querySelector("#difference").value = subtract(num1, num2);
+    document.querySelector("#difference").value = sub(num1, num2);
 }
 buttonElementSubtract.addEventListener("click", subNumbers);
 
