@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(38, 33, 33);
+}
+
+header {
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+}
+
+#left {
+    color: white;
+    display: inline;
+}
+
+#right {
+    color: white;
+    display: inline;
+}
+
+#grid-entry {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    color: white;
+    justify-content: center;
+    margin: 5px 5px;
+}
+#grid-item {
+    background-color: rgb(82, 28, 96);
+    text-align: center;
+    margin: 2px 50px;
+}
+
+
+#book {
+    margin-left: -75px;
+}
+
+a {
+    color: green;
+}
