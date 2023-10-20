@@ -1,23 +1,45 @@
-const URLM = "https://raw.githubusercontent.com/bcbooks/scriptures-json/master/book-of-mormon.json";
+const URLM = "https://github.com/AustinCBYUi/cse121b/blob/main/scriptureSummary.json";
 let scriptures = [];
 
-const divGrid = document.getElementById("grid-item")
+const divGrid = document.getElementById("grid-entry")
+const rightSideEle = document.getElementById("rightSide");
 
 const displayBooks = async (books) => {
     books.forEach(book => {
         var addGrid = document.createElement("div");
-        addGrid.id = "grid-item";
-        let h5 = document.createElement("h5");
-        h5.innerHTML = book.book;
+        addGrid.id = "grid-item-left";
+        let button = document.createElement("button");
+        button.innerHTML = book.book;
+        let summarized = book.sum;
+        
+        button.addEventListener("click", () => {
+            let newGrid = document.createElement("div");
+            newGrid.id = "rightSide";
+            let para = document.createElement("p");
+            para.innerHTML = summarized;
+            newGrid.appendChild(para);
+            divGrid.appendChild(newGrid);
 
-        addGrid.appendChild(h5);
+            // alert(summarized);
+        })
+
+        addGrid.appendChild(button);
 
         divGrid.appendChild(addGrid);
     });
 }
 
+
+
+async function reset() {
+    let erase = await document.getElementById("grid-item");
+    erase.innerHTML = null;
+}
+
+
+
 let getList = async () => {
-    let response = await fetch();
+    let response = await fetch("https://raw.githubusercontent.com/AustinCBYUi/cse121b/main/scriptureSummary.json");
     const data = await response.json();
     scriptures = data;
     displayBooks(scriptures);
