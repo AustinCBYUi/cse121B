@@ -96,13 +96,13 @@ footer {
 #left {
     color: white;
     position: relative;
-    right: 10px;
+    left: 3px;
 }
 
 #right {
     color: white;
     position: relative;
-    right: 25px;
+    left: 6px;
 }
 
 #grid-item-left {
