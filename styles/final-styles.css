@@ -68,10 +68,15 @@ button:hover {
 
 footer {
     background-color: blueviolet;
-    height: 50px;
+    height: 60px;
     font-weight: bold;
     color: white;
     text-align: center;
+}
+
+
+#footy {
+    margin-top: -2px;
 }
 
 /* 
