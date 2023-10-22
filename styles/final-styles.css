@@ -74,6 +74,10 @@ footer {
     text-align: center;
 }
 
+/* 
+ * Media query selection for phones below.
+ *
+*/
 
 @media (max-width: 480px) {
 #grid-entry {
