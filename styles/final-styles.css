@@ -90,12 +90,14 @@ footer {
 
 #left {
     color: white;
-    margin-left: 27px;
+    position: relative;
+    right: 25px;
 }
 
 #right {
     color: white;
-    margin-left: 55px;
+    position: relative;
+    right: 75px;
 }
 
 #grid-item-left {
