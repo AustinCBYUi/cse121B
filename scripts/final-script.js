@@ -4,6 +4,8 @@ let scriptures = [];
 const divGrid = document.getElementById("grid-entry")
 const rightSideEle = document.getElementById("rightSide");
 
+
+//Displays the books section in the json file.
 const displayBooks = async (books) => {
     books.forEach(book => {
         var addGrid = document.createElement("div");
@@ -12,7 +14,9 @@ const displayBooks = async (books) => {
         button.innerHTML = book.book;
         let summarized = book.sum;
         
+        //Making this was when I came to the conclusion that JS is actually incredible.
         button.addEventListener("click", () => {
+            //Used the previous week to work out this reset() function.
             reset();
             let newGrid = document.createElement("div");
             newGrid.id = "grid-item-right";
@@ -32,6 +36,7 @@ const displayBooks = async (books) => {
 
 
 
+//Reset function to erase items.
 async function reset() {
     let erase = await document.querySelector("#grid-item-right");
     erase.remove();
