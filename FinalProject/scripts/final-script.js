@@ -1,8 +1,11 @@
-const URLM = "https://github.com/AustinCBYUi/cse121b/blob/main/scriptureSummary.json";
+const URLM = "https://raw.githubusercontent.com/AustinCBYUi/cse121b/main/FinalProject/jsonData/scriptureSummary.json";
 let scriptures = [];
 
 const divGrid = document.getElementById("grid-entry")
-const rightSideEle = document.getElementById("rightSide");
+
+import { qs, alertMessage } from "./testing.js";
+
+const ssMessage = "Welcome to the Scripture Summary website!";
 
 
 //Displays the books section in the json file.
@@ -54,10 +57,11 @@ async function reset() {
 
 
 let getList = async () => {
-    let response = await fetch("https://raw.githubusercontent.com/AustinCBYUi/cse121b/main/scriptureSummary.json");
+    let response = await fetch(URLM);
     const data = await response.json();
     scriptures = data;
     displayBooks(scriptures);
 }
 
 getList();
+alertMessage(ssMessage, 5000);
