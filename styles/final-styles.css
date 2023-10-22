@@ -26,8 +26,7 @@ button:hover {
 
 #grid-entry {
     display: grid;
-    grid-template-columns: 500px 500px;
-    grid-column: 0/1;
+    grid-template-columns: 350px 500px;
     color: white;
     justify-content: center;
     margin: 5px 5px;
@@ -35,25 +34,62 @@ button:hover {
 
 /* Working on the grid-column to stretch the sides */
 
+#left {
+    color: white;
+    margin-left: 430px;
+}
+
+#right {
+    color: white;
+    margin-top: -35px;
+    margin-left: 898px;
+}
+
 #grid-item-left {
     background-color: rgb(82, 28, 96);
     text-align: center;
     margin: 2px 50px;
     grid-column: 1/2;
+    height: 36px;
+    max-height: 36px;
+    max-width: 150px;
 }
 
 #grid-item-right {
     background-color: rgb(82, 28, 96);;
     text-align: center;
     margin: 2px 50px;
+    grid-column: 2/3;
+    grid-row-start: 0;
+    max-width: 600px;
+    margin-top: -30px;
+}
+
+@media (max-width: 480px) {
+#grid-entry {
+    display: grid;
+    grid-template-columns: 100px 350px;
+    color: white;
+    justify-content: center;
+    margin: 5px 5px;
+}
+
+#left {
+    color: white;
+    margin-left: 20px;
+}
+
+#grid-item-left {
+    background-color: rgb(82, 28, 96);
+    text-align: center;
     grid-column: 1/2;
+    max-width: 100px;
+    max-height: 30px;
 }
 
-
-#book {
-    margin-left: -75px;
+#grid-item-right {
+    grid-column: 2/3;
+    max-width: 350;
+    margin-top: -15px;
 }
-
-a {
-    color: green;
 }

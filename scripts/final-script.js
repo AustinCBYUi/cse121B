@@ -13,8 +13,9 @@ const displayBooks = async (books) => {
         let summarized = book.sum;
         
         button.addEventListener("click", () => {
+            reset();
             let newGrid = document.createElement("div");
-            newGrid.id = "rightSide";
+            newGrid.id = "grid-item-right";
             let para = document.createElement("p");
             para.innerHTML = summarized;
             newGrid.appendChild(para);
@@ -32,8 +33,9 @@ const displayBooks = async (books) => {
 
 
 async function reset() {
-    let erase = await document.getElementById("grid-item");
-    erase.innerHTML = null;
+    let erase = await document.querySelector("#grid-item-right");
+    erase.remove();
+    // erase.innerHTML = null;
 }
 
 
