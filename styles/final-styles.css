@@ -27,6 +27,7 @@ button:hover {
 #grid-entry {
     display: grid;
     grid-template-columns: 350px 500px;
+    grid-template-rows: 50px 50px;
     color: white;
     justify-content: center;
     margin: 5px 5px;
@@ -60,10 +61,12 @@ button:hover {
     text-align: center;
     margin: 2px 50px;
     grid-column: 2/3;
-    grid-row-start: 0;
-    max-width: 600px;
-    margin-top: -30px;
+    grid-row: 0/15;
+    max-width: 500px;
+    margin-top: -70px;
+    padding: 5px;
 }
+
 
 @media (max-width: 480px) {
 #grid-entry {
