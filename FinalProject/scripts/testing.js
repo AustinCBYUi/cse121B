@@ -1,9 +1,4 @@
 /* This is from the ESModules github example here. */
-// filename: utility.js
-// wrapper function for querySelector
-export function qs(selector) {
-  return document.querySelector(selector);
-}
 
 // create an alert at the top of the page for 3 seconds
 // requires the message to be displayed and the time in milliseconds.
@@ -20,6 +15,17 @@ export function alertMessage(message, duration = 3000) {
     }, duration);
 }
 
-/* Start of my functions */
+/* Start of my functions? */
 
-// export function 
+export function newMessage(duration = 2000) {
+  let alert = document.createElement("p");
+  alert.innerHTML = "Created by Austin Campbell at BYUi";
+  alert.setAttribute(
+    "style",
+    "background-color: rgb(45, 37, 48); border: 1px solid rgb(45, 37, 48); max-width: 250px; position: absolute; top: 250px; left: 805px; right: 0; padding: 2em; text-align: center; color: white;"
+    );
+    document.body.prepend(alert);
+    setTimeout(function () {
+      document.body.removeChild(alert);
+    }, duration);
+}

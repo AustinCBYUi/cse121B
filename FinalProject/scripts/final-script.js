@@ -3,7 +3,7 @@ let scriptures = [];
 
 const divGrid = document.getElementById("grid-entry")
 
-import { qs, alertMessage } from "./testing.js";
+import { alertMessage, newMessage } from "./testing.js";
 
 const ssMessage = "Welcome to the Scripture Summary website!";
 
@@ -65,3 +65,4 @@ let getList = async () => {
 
 getList();
 alertMessage(ssMessage, 5000);
+newMessage(3000);
